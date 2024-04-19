@@ -5,6 +5,7 @@ import Styles from './Nav.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from '../../redux/user-reducer/currentuserSlice';
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../../firebase/firebase';
 
 
 
@@ -21,6 +22,7 @@ export default function Nav() {
       password: '',
       signIn: false
     }]));
+    auth.signOut();
   }
 
   const toHome = () => {

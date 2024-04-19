@@ -1,51 +1,95 @@
+/* Main container styling for sign-up section */
 .signupdiv {
-  max-width: 80%;
-  height: 500px;
-  position: absolute;
-  margin: 10%;
-  margin-top: 50px;
-}
-
-.formdiv {
-  max-width: 30%;
-  height: 45vh;
+  max-width: 400px;
+  /* Slightly wider to better accommodate elements */
+  margin: 2% auto;
+  /* Auto margins for horizontal centering */
   padding: 20px;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  /* Padding for internal spacing */
   position: relative;
-  top: 10px;
-  left: 35%;
+  /* Ensuring relative positioning for better control */
+  top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  background-image: linear-gradient(to right, #fdfbfb 0%, #ebedee 100%);
+  /* Improved gradient direction */
 }
 
-h4 {
-  margin-left: 35px;
+/* Form container styling */
+.formdiv {
+  display: flex;
+  flex-direction: column;
+  /* Ensuring vertical stacking of form elements */
+  align-items: center;
+  /* Center aligning the child elements */
+  padding: 20px;
+  /* Consistent padding around the elements */
+  background-color: #ffffff;
+  /* Solid color background for clarity */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* More subtle shadow for form */
 }
 
+/* Styles for input fields */
 .inputfield {
-  margin: 10px 35px;
-  border: 1px solid rgb(91, 135, 222);
-  padding: 10px;
-  border-radius: 10px;
-  width: 80%;
-  height: 35px;
+  width: 90%;
+  /* Relative width for responsiveness */
+  height: 40px;
+  /* Increased height for better clickability */
+  margin: 10px 0;
+  /* Vertical margin for separation */
+  padding: 0 10px;
+  /* Padding for text inside inputs */
+  border: 1px solid #ccc;
+  /* Subtle border */
+  border-radius: 5px;
+  /* Rounded corners */
+  box-sizing: border-box;
+  /* Including padding and border in width calculation */
 }
 
-input:hover {
-  border: 1px solid rgb(149, 192, 31)
+.inputfield:focus {
+  border-color: #007bff;
+  /* Focus color */
+  outline: none;
+  /* Removing default focus outline */
 }
 
+/* Button styling */
 .btn {
-  margin: 20px 30px;
-  border: 1px solid rgb(91, 135, 222);
-  border-radius: 10px;
-  width: 40%;
-  height: 35px;
-  color: rgb(91, 135, 222);
-  background-color: white;
-}
-.btn:hover {
+  width: 50%;
+  /* Appropriate width for button */
+  height: 40px;
+  /* Standard height for better interaction */
+  margin-top: 20px;
+  /* Space from the last input field */
+  background-color: #007bff;
+  /* Primary color for button */
   color: white;
-  background-color: rgb(91, 135, 222);
+  /* Text color */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Consistency with input fields */
   cursor: pointer;
+  /* Cursor indicates clickable */
+  transition: background-color 0.3s;
+  /* Smooth transition on hover */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  /* Darker shade on hover */
+}
+
+/* Heading styles within form */
+h4 {
+  text-align: center;
+  /* Centering the heading */
+  color: #333;
+  /* Dark color for text */
+  margin-bottom: 15px;
+  /* Space before the form starts */
 }

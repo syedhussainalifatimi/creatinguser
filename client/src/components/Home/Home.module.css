@@ -16,6 +16,11 @@
   color: black;
   font-size: 22px;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+.headingdiv a:hover {
+  color: rgb(51, 4, 4);
+  font-size: 24px;
 }
 
 .btn button{
@@ -29,4 +34,41 @@
   font-weight: 700;
   font-size: 20px;
   margin-top: 15px;
+}
+.btn button:hover {
+  color: #021a18;
+}
+
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+    /* Less padding for smaller screens */
+    align-items: center;
+    /* Center alignment for better mobile presentation */
+    background-position: top 50% center;
+    /* Adjust background position for better visibility */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .headingdiv a {
+    font-size: 18px;
+    /* Smaller font size for smaller screens */
+  }
+
+  .headingdiv a:hover {
+    font-size: 20px;
+    /* Slightly larger on hover to maintain interactivity */
+  }
+
+  .btn button {
+    padding: 10px 20px;
+    /* Smaller padding to fit smaller screens */
+    font-size: 16px;
+    /* Smaller font size for better fit */
+    margin-top: 10px;
+    /* Reduce margin-top to compact the layout */
+  }
 }

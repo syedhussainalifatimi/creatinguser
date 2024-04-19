@@ -1,0 +1,120 @@
+.maincontainer{
+  max-width: 80%;
+  margin: auto;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  max-width: 1200px;
+  /* Adjust based on your layout needs */
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nameimagediv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.nameimagediv:hover {
+  transform: scale(1.03);
+}
+
+.nameimagediv img {
+  width: 80%;
+  /* Adjusts image width to be responsive within the grid */
+  height: 250px;
+  object-fit:inherit;
+  border-radius: 3px;
+}
+
+.nameimagediv h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.pricevolumediv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  color: #666;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #004494;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .maincontainer {
+    max-width: 95%;
+    /* More width on smaller screens for edge-to-edge design */
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    /* Single column layout for small screens */
+    padding: 10px;
+    /* Reduced padding */
+  }
+
+  .nameimagediv img {
+    width: 50%;
+    /* Full width to accommodate smaller screens */
+    height: auto;
+    /* Adjust height automatically to maintain aspect ratio */
+  }
+
+  .nameimagediv {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    /* Slightly reduced padding */
+  }
+
+  .nameimagediv h3 {
+    font-size: 18px;
+    /* Smaller font size for better readability on small devices */
+  }
+
+  .pricevolumediv {
+    flex-direction: row;
+    /* Stack price and volume information vertically */
+    align-items: start;
+    /* Align items to the start */
+  }
+
+  .btn {
+    width: 100%;
+    /* Full width button for easier access */
+    padding: 12px;
+    /* Slightly larger padding for easier interaction */
+  }
+}

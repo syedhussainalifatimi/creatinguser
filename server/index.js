@@ -2,6 +2,7 @@ const express = require ('express')
 const mongoose = require ('mongoose')
 const cors = require ('cors')
 const UserModel = require('./models/Users')
+const HotproductsModel = require('./models/Hotproducts')
 
 
 const app = express()
@@ -35,7 +36,11 @@ app.post('/postUsers', async (req, res) => {
   }
 });
 
-
+app.get('/getHotproducts', (req, res) => {
+  HotproductsModel.find()
+    .then(hotproducts => res.json(hotproducts))
+    .catch(err => res.status(500).json(err));
+});
  
 
 

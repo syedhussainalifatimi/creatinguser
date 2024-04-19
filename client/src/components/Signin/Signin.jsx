@@ -3,14 +3,14 @@ import axios from 'axios';
 import Styles from './Signin.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setUsers } from '../../redux/user-reducer/userSlice'; // Make sure the import path is correct
 import { setUser } from '../../redux/user-reducer/currentuserSlice';
-
-
+import { useHandleSignInGoogle } from './signinwithgoogle';
 
 export default function Signin() {
+
   const [currentUserEmail, setCurrentUserEmail] = useState('');
   const [currentUserPassword, setCurrentUserPassword] = useState('');
 
@@ -24,8 +24,8 @@ export default function Signin() {
       .catch(err => console.log(err));
   }, [dispatch]); // Include dispatch in the dependency array
 
-  const users = useSelector(state => state.usersInfo.usersInfo); // Ensure this path matches your state structure
 
+  const users = useSelector(state => state.usersInfo.usersInfo); // Ensure this path matches your state structure
 
   // signin functionality 
 
@@ -49,6 +49,7 @@ export default function Signin() {
     }
   }
 
+  const handleSignInGoogle = useHandleSignInGoogle();
 
   return (
     <div className={Styles.signupdiv}>
@@ -73,7 +74,7 @@ export default function Signin() {
 
 
           <button type='submit' className={Styles.btn}>Sign In</button>
-          <button className={Styles.btngoogle}>Sign In With Google</button>
+          <button className={Styles.btngoogle} onClick={handleSignInGoogle}>Sign In With Google</button>
 
         </form>
 
