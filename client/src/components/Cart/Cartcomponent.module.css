@@ -1,0 +1,54 @@
+.maincontainer {
+  max-width: 80%;
+  margin: auto;
+}
+
+.navigatebtn{
+    width: 18%;
+    /* Appropriate width for button */
+    height: 40px;
+    /* Standard height for better interaction */
+    margin-top: 20px;
+    /* Space from the last input field */
+    background-color: #007bff;
+    /* Primary color for button */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Consistency with input fields */
+    cursor: pointer;
+    /* Cursor indicates clickable */
+    transition: background-color 0.3s;
+    /* Smooth transition on hover */
+    font-size: 18px;
+    
+}
+
+.navigatebtn:hover{
+  background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .maincontainer {
+    max-width: 95%;
+    /* More width on smaller screens for edge-to-edge design */
+  }
+
+    .navigatebtn {
+       font-size: 10px;
+     }
+
+}

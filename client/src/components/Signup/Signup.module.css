@@ -3,7 +3,7 @@
   max-width: 400px;
   /* Slightly wider to better accommodate elements */
   margin: 2% auto;
-  /* Auto margins for horizontal centering */
+   /* Auto margins for horizontal centering */
   padding: 20px;
   /* Padding for internal spacing */
   position: relative;
@@ -22,6 +22,7 @@
   flex-direction: column;
   /* Ensuring vertical stacking of form elements */
   align-items: center;
+  margin-top: 20px;
   /* Center aligning the child elements */
   padding: 20px;
   /* Consistent padding around the elements */

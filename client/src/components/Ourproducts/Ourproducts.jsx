@@ -1,28 +1,26 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setHotproducts } from '../../redux/hotproducts-reducer/hotproductsSlice';
-//import { addItem } from '../../redux/cart-reducer/cartSlice';
-import Styles from './Hotproducts.module.css';
+import { setOurproducts } from '../../redux/ourproducts-reducer/ourproductsSlice';
+import { useEffect } from 'react';
+import Styles from './Ourproducts.module.css';
 
-export default function Hotproducts({ handleCart }) {
-
+export default function Ourproducts({ handleCart }) {
   const dispatch = useDispatch();
 
-  // Effect to fetch hot products
   useEffect(() => {
-    axios.get('http://localhost:3001/getHotproducts')
-      .then(response => dispatch(setHotproducts(response.data)))
+    axios.get('http://localhost:3001/getOurproducts')
+      .then(response => dispatch(setOurproducts(response.data)))
       .catch(err => console.log(err));
   }, [dispatch]);
 
-  const hotProductsData = useSelector(state => state.hotproducts.hotproducts);
+  const ourProductsData = useSelector(state => state.ourproducts.ourproducts);
 
   return (
     <div className={Styles.maincontainer}>
-      <h2>New Arrival</h2>
+      <h2>Our Products</h2>
       <div className={Styles.container}>
-        {hotProductsData.map((product, index) => (
+        {ourProductsData.map((product, index) => (
           <div key={index} className={Styles.nameimagediv}>
             <div className={Styles.nameimagediv}>
               <img src={product.imgUrl} alt={product.product} />
@@ -37,5 +35,5 @@ export default function Hotproducts({ handleCart }) {
         ))}
       </div>
     </div>
-  );
+  )
 }

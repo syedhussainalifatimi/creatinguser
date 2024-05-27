@@ -11,6 +11,7 @@ import { auth } from '../../firebase/firebase';
 
 export default function Nav() {
   const Navigate = useNavigate();
+  const cartItems = useSelector(state => state.cartItems.cartItems);
 
   const user = useSelector(state => state.user.user); // Ensure this path matches your state structure
 
@@ -46,7 +47,7 @@ export default function Nav() {
           <Link to='cart'>Cart</Link>
 
           <div className={Styles.cartcounter}>
-            <p>0</p>
+            <p>{cartItems.length}</p>
           </div>
 
         </div>
